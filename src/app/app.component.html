@@ -3,3 +3,17 @@
         <span class="navbar-brand mb-0 h1">Aplicación para transformar un excel a un txt</span>
     </div>
 </nav>
+
+<div style="padding-left: 25%; padding-right: 25%; padding-top: 5%;">
+    <div class="card">
+        <h5 class="card-header">Cargue un archivo</h5>
+        <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <p class="card-text">Seleccione un archivo para realizar la transformación</p>
+            <span class="btn btn-secondary btn-file">
+							<input accept=".xlsx" class="hidden" name="banner" type="file" id="banner" (change)="carga($event.target.files)">
+						</span>
+            <div class="m-2 text-success">{{status}}</div>
+        </div>
+    </div>
+</div>
