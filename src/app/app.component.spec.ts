@@ -33,6 +33,11 @@ describe('AppComponent', () => {
 		component.ngOnInit()
   });
 
+	it('ngOnInit() should be called on error', () => {
+    spyOn(service, 'getSmokeTest').and.returnValues(throwError({}))
+		component.ngOnInit()
+  });
+
   it('carga()', () => {
 		let param: File
 		let fileName: string

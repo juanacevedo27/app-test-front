@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
 			(data) => {
 				console.log(data)
 				this.status = 'Conectado al servidor'
-			})
+			}, (err: any) => { console.log(err) }
+		)
 	}
 
 	carga(param) {
@@ -39,7 +40,7 @@ export class AppComponent implements OnInit {
 		)
 	}
 
-	descarga(fileName){
+	descarga(fileName) {
 		this.service.getDownload(fileName).subscribe(
 			(download: any) => {
 				console.log('descarga-->', download)
